@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="montserrat_regular.otf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Ccview" customModule="porter" customModuleProvider="target">
+            <connections>
+                <outlet property="cardNumber" destination="rzy-ja-H4k" id="oNP-3H-rb9"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="iX5-zZ-7HO"/>
+                <outlet property="expDate" destination="11u-6v-5x2" id="w6c-nm-gLB"/>
+                <outlet property="imagen" destination="RiX-Xm-mr6" id="JOh-ve-Fxz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RiX-Xm-mr6">
+                    <rect key="frame" x="16" y="12" width="69" height="56"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="69" id="whj-Rf-JTe"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11u-6v-5x2">
+                    <rect key="frame" x="97" y="48" width="258" height="20"/>
+                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                    <color key="textColor" red="0.054802715779999997" green="0.2157095373" blue="0.44699972869999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzy-ja-H4k">
+                    <rect key="frame" x="97" y="12" width="258" height="20"/>
+                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                    <color key="textColor" red="0.054802715779999997" green="0.2157095373" blue="0.44699972869999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="rzy-ja-H4k" firstAttribute="leading" secondItem="RiX-Xm-mr6" secondAttribute="trailing" constant="12" id="FHj-8s-Qd0"/>
+                <constraint firstItem="RiX-Xm-mr6" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="12" id="SXE-6E-KA7"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rzy-ja-H4k" secondAttribute="trailing" constant="20" id="bmT-BD-F8F"/>
+                <constraint firstItem="rzy-ja-H4k" firstAttribute="top" secondItem="RiX-Xm-mr6" secondAttribute="top" id="mhB-mJ-4s5"/>
+                <constraint firstItem="RiX-Xm-mr6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="nkg-6o-axS"/>
+                <constraint firstItem="11u-6v-5x2" firstAttribute="leading" secondItem="rzy-ja-H4k" secondAttribute="leading" id="qWN-xE-rih"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="11u-6v-5x2" secondAttribute="bottom" constant="12" id="uaN-h4-5ub"/>
+                <constraint firstItem="11u-6v-5x2" firstAttribute="trailing" secondItem="rzy-ja-H4k" secondAttribute="trailing" id="wnc-A2-hu9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="RiX-Xm-mr6" secondAttribute="bottom" constant="12" id="zoo-lG-YYp"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="39.200000000000003" y="359.82008995502252"/>
+        </view>
+    </objects>
+</document>

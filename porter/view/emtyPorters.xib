@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_vacioPorter" translatesAutoresizingMaskIntoConstraints="NO" id="S80-lv-99H">
+                    <rect key="frame" x="107.5" y="105" width="105" height="121"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="105" id="Bcl-Y5-bgX"/>
+                        <constraint firstAttribute="height" constant="121" id="ar7-rT-xeN"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upps!!!" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="erB-6q-l27">
+                    <rect key="frame" x="131" y="246" width="58" height="21"/>
+                    <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="18"/>
+                    <color key="textColor" red="0.054901960784313725" green="0.21568627450980393" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Al parecer no hay información que mostrar aún en este aparatado" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rts-NE-eeh">
+                    <rect key="frame" x="60" y="282" width="200.5" height="52.5"/>
+                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
+                    <color key="textColor" red="0.054901960780000002" green="0.2156862745" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="erB-6q-l27" firstAttribute="top" secondItem="S80-lv-99H" secondAttribute="bottom" constant="20" id="5Fh-UA-MoP"/>
+                <constraint firstItem="rts-NE-eeh" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Kig-Xk-7l5"/>
+                <constraint firstItem="erB-6q-l27" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="XQW-Yh-tE2"/>
+                <constraint firstItem="rts-NE-eeh" firstAttribute="top" secondItem="erB-6q-l27" secondAttribute="bottom" constant="15" id="aFV-Ux-ePw"/>
+                <constraint firstItem="S80-lv-99H" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="cv4-oy-ADn"/>
+                <constraint firstItem="S80-lv-99H" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="85" id="iJf-Uj-9HI"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="133.125" y="154.22535211267606"/>
+        </view>
+        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3da-jx-F4B">
+            <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+            <nil key="textColor"/>
+            <nil key="highlightedColor"/>
+        </label>
+    </objects>
+    <resources>
+        <image name="ico_vacioPorter" width="107" height="123"/>
+    </resources>
+</document>

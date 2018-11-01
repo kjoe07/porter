@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="resetViewController" customModule="roomatch" customModuleProvider="target">
+            <connections>
+                <outlet property="acceptButton" destination="Zdd-AS-eLe" id="RzY-6o-At6"/>
+                <outlet property="cancelButton" destination="ivJ-Zd-8nx" id="5wD-xB-gmG"/>
+                <outlet property="email" destination="FfV-q1-04H" id="YAv-fD-QdN"/>
+                <outlet property="view" destination="iN0-l3-epB" id="r2o-ng-plT"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="292"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hmG-1I-3Eo">
+                    <rect key="frame" x="0.0" y="0.0" width="343" height="292"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Por favor, introduce tu dirección de correo con el que te diste de alta y te enviaremos un email con la nueva contraseña." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubI-ux-nJk">
+                            <rect key="frame" x="20" y="75" width="303" height="80"/>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zdd-AS-eLe">
+                            <rect key="frame" x="171.5" y="242" width="171.5" height="50"/>
+                            <state key="normal" title="Enviar">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="saveAction:" destination="-1" eventType="touchUpInside" id="wxM-Sf-I28"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivJ-Zd-8nx">
+                            <rect key="frame" x="0.0" y="242" width="171.5" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="Rp1-Tw-9fd"/>
+                            </constraints>
+                            <state key="normal" title="Cancelar">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelAction:" destination="-1" eventType="touchUpInside" id="Vct-8X-A7i"/>
+                            </connections>
+                        </button>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FfV-q1-04H">
+                            <rect key="frame" x="20" y="189.5" width="303" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="8dy-3s-JUx"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="continue" textContentType="email"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recuperar Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OwI-Ah-ysU">
+                            <rect key="frame" x="20" y="21" width="200.5" height="23.5"/>
+                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="FfV-q1-04H" firstAttribute="leading" secondItem="hmG-1I-3Eo" secondAttribute="leading" constant="20" id="3kB-4y-tIR"/>
+                        <constraint firstItem="OwI-Ah-ysU" firstAttribute="top" secondItem="hmG-1I-3Eo" secondAttribute="top" constant="21" id="3mG-bg-svf"/>
+                        <constraint firstItem="ubI-ux-nJk" firstAttribute="leading" secondItem="hmG-1I-3Eo" secondAttribute="leading" constant="20" id="4DP-yw-JKY"/>
+                        <constraint firstItem="ubI-ux-nJk" firstAttribute="centerX" secondItem="hmG-1I-3Eo" secondAttribute="centerX" id="8yF-TY-1se"/>
+                        <constraint firstAttribute="trailing" secondItem="ubI-ux-nJk" secondAttribute="trailing" constant="20" id="93e-ch-LD0"/>
+                        <constraint firstItem="OwI-Ah-ysU" firstAttribute="leading" secondItem="hmG-1I-3Eo" secondAttribute="leading" constant="20" id="AEs-qL-NxL"/>
+                        <constraint firstAttribute="trailing" secondItem="FfV-q1-04H" secondAttribute="trailing" constant="20" id="AT4-3t-n8j"/>
+                        <constraint firstAttribute="width" constant="343" id="DtJ-QR-FYj"/>
+                        <constraint firstItem="ivJ-Zd-8nx" firstAttribute="height" secondItem="Zdd-AS-eLe" secondAttribute="height" id="Gx4-LF-Ie6"/>
+                        <constraint firstAttribute="bottom" secondItem="Zdd-AS-eLe" secondAttribute="bottom" id="KRA-65-W4p"/>
+                        <constraint firstAttribute="bottom" secondItem="ivJ-Zd-8nx" secondAttribute="bottom" id="MPc-WI-4c9"/>
+                        <constraint firstItem="Zdd-AS-eLe" firstAttribute="leading" secondItem="ivJ-Zd-8nx" secondAttribute="trailing" id="UT0-JU-tMH"/>
+                        <constraint firstItem="FfV-q1-04H" firstAttribute="top" secondItem="ubI-ux-nJk" secondAttribute="bottom" constant="34.5" id="gTZ-4u-XgA"/>
+                        <constraint firstAttribute="trailing" secondItem="Zdd-AS-eLe" secondAttribute="trailing" id="gmW-fv-y9H"/>
+                        <constraint firstItem="ivJ-Zd-8nx" firstAttribute="width" secondItem="Zdd-AS-eLe" secondAttribute="width" id="iJo-1X-byq"/>
+                        <constraint firstAttribute="height" constant="292" id="kNR-LP-i5t"/>
+                        <constraint firstItem="ubI-ux-nJk" firstAttribute="top" secondItem="OwI-Ah-ysU" secondAttribute="bottom" constant="30" id="kSk-eh-c2J"/>
+                        <constraint firstItem="ivJ-Zd-8nx" firstAttribute="leading" secondItem="hmG-1I-3Eo" secondAttribute="leading" id="oMx-vl-6aQ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="hmG-1I-3Eo" secondAttribute="trailing" id="7Zf-hz-hX6"/>
+                <constraint firstItem="hmG-1I-3Eo" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Eu7-Hg-ssu"/>
+                <constraint firstItem="hmG-1I-3Eo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Kyn-gf-grB"/>
+                <constraint firstAttribute="bottom" secondItem="hmG-1I-3Eo" secondAttribute="bottom" id="gkJ-gZ-lED"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="25.5" y="52"/>
+        </view>
+    </objects>
+</document>
