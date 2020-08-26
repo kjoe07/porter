@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import PopupDialog
 class pricesViewController: UIViewController {
 	@IBOutlet weak var onlyDriverPrice: UILabel!
 	@IBOutlet weak var porterPrice: UILabel!
@@ -20,7 +21,8 @@ class pricesViewController: UIViewController {
 	@IBOutlet weak var time2: UILabel!
 	@IBOutlet weak var time3: UILabel!
 	//var servicio: service?
-	@IBOutlet var time: [UILabel]!
+    @IBOutlet weak var container: sliderInfoViewController!
+    @IBOutlet var time: [UILabel]!
 	var simulacion: simulation?
 	var type = 1
 	var params: Parameters?
@@ -65,7 +67,7 @@ class pricesViewController: UIViewController {
 			let vc = segue.destination as! simulacionViewController
 			vc.servicio = type
 			vc.simulacion = self.simulacion
-		}else{
+		}else if segue.identifier == "date"{
 			let vc = segue.destination as! servicesViewController
 			vc.type = type
 			vc.simulacion = self.simulacion
@@ -74,14 +76,14 @@ class pricesViewController: UIViewController {
 		
     }
 	
-	@IBAction func driverSelected(_ sender: Any) {
-		if porterswitch.isOn{
+	@IBAction func driverSelected(_ sender: UISwitch) {
+		if sender.isOn{
 			type = 1
-			dualporterswitch.setOn(!driverswitch.isOn, animated: true)
-			porterswitch.setOn(!driverswitch.isOn, animated: true)
+			dualporterswitch.setOn(!sender.isOn, animated: true)
+			porterswitch.setOn(!sender.isOn, animated: true)
 			params!["driver_type_id"] = 1
 		}else{
-			driverswitch.setOn(true, animated: true)
+			sender.setOn(true, animated: true)
 		}
 	}
 	@IBOutlet weak var porterswitch: UISwitch!
@@ -97,22 +99,28 @@ class pricesViewController: UIViewController {
 			sender.setOn(true, animated: true)
 		}
 	}
-	@IBAction func dualPortedSelected(_ sender: Any) {
-		if dualporterswitch.isOn{
+	@IBAction func dualPortedSelected(_ sender: UISwitch) {
+		if sender.isOn{
 			type = 3
-			porterswitch.setOn(!dualporterswitch.isOn, animated: true)
-			driverswitch.setOn(!dualporterswitch.isOn, animated: true)
+			porterswitch.setOn(!sender.isOn, animated: true)
+			driverswitch.setOn(!sender.isOn, animated: true)
 			params!["driver_type_id"] = 3
 		}else{
-			dualporterswitch.setOn(true, animated: true)
+			sender.setOn(true, animated: true)
 		}		
 	}
-	@IBAction func showSimulation(_ sender: Any){
-		if driverswitch.isOn || porterswitch.isOn || dualporterswitch.isOn{
-			performSegue(withIdentifier: "showSimulation", sender: self)
-		}
+	@IBAction func showSimulation(_ sender: UIButton){
+//        if driverswitch.isOn || porterswitch.isOn || dualporterswitch.isOn{
+//            performSegue(withIdentifier: "showSimulation", sender: self)
+//        }
+        let comoVC = infoViewController(nibName: "serviceTypeDetail", bundle: nil)
+        comoVC.id = sender.tag
+        let popup = PopupDialog(viewController: comoVC, buttonAlignment: .horizontal, transitionStyle: .bounceDown, tapGestureDismissal: true)
+        
+        present(popup, animated: true, completion: nil)
 	}
-	@IBAction func goServiceType(){
+    @IBAction func goServiceType(_ sender: UIButton){
+       
 		self.performSegue(withIdentifier: "date", sender: self)
 	}
 }
