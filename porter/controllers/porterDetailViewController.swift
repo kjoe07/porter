@@ -70,7 +70,8 @@ class porterDetailViewController: UIViewController,MFMessageComposeViewControlle
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if segue.identifier == "goMap"{
-			let vc = (segue.destination as! UINavigationController).topViewController! as! mapViewController
+			//let vc = (segue.destination as! UINavigationController).topViewController! as! mapViewController
+            let vc = segue.destination as! mapViewController
 			//		vc.id = servicio?.id?.description
 			vc.servicio = servicio
 		}
@@ -167,9 +168,14 @@ class porterDetailViewController: UIViewController,MFMessageComposeViewControlle
 		}else{
 			destinoLabel.text = service.destinyAdress!
 		}
-		trayectoTimeLabel.text = String(format: "%.2f min (Tiempo estimado)", service.calculatedTime!) + " "
+        if let ct = service.calculatedTime{
+            trayectoTimeLabel.text = String(format: "%.2f min (Tiempo estimado)", ct) //+ " "
+        }
+        if let price = service.price{
+            precioLabel.text = String(format: "%.2f euros", price)
+        }
 		 //.description + " min (Tiempo estimado)"
-		precioLabel.text = String(format: "%.2f euros", service.price!)//service.price!.description + " euros"
+		//service.price!.description + " euros"
 		
 		if service.state == "FINISHED" || service.state == "CHARGE"{
 			//descargaTime.text = ""

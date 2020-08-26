@@ -156,18 +156,19 @@ class perfilViewController: UIViewController,GalleryControllerDelegate {
 		Image.resolve(images: images, completion: { [weak self] resolvedImages in
 			if let image = resolvedImages.first{
 				print("there is an image in didselect")
-				self?.avatar.image = image
-				self?.imageChanged = true
-				self?.avatar.layer.cornerRadius = (self?.avatar.frame.width)! / 2
-				self?.avatar.layer.borderColor = UIColor.white.cgColor
-				self?.avatar.layer.borderWidth = 2.0
-				self?.avatar.clipsToBounds = true
+                guard let self = self else {return}
+				self.avatar.image = image
+				self.imageChanged = true
+				self.avatar.layer.cornerRadius = self.avatar.frame.width / 2
+				self.avatar.layer.borderColor = UIColor.white.cgColor
+				self.avatar.layer.borderWidth = 2.0
+				self.avatar.clipsToBounds = true
+                self.avatar.contentMode = .scaleAspectFill
 			}else{
 				print("no image")
 			}
 		})
 		gallery = nil
-		
 	}
 	
 	func galleryController(_ controller: GalleryController, requestLightbox images: [Image]) {

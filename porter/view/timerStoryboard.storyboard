@@ -1,7 +1,87 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NQD-zK-M4F">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <customFonts key="customFonts">
+        <array key="montserrat_bold.otf">
+            <string>Montserrat-Bold</string>
+        </array>
+        <array key="montserrat_regular.otf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Slider Info View Controller-->
+        <scene sceneID="BE9-4z-cov">
+            <objects>
+                <viewController id="NQD-zK-M4F" customClass="sliderInfoViewController" customModule="porter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p6o-Mq-0UK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sabías que.." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTU-FK-LDa">
+                                <rect key="frame" x="147" y="5" width="81" height="22"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="13"/>
+                                <color key="textColor" red="0.054802715779999997" green="0.2157095373" blue="0.44699972869999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="WuV-GR-2I6">
+                                <rect key="frame" x="152" y="100" width="71" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="f9s-qZ-qTw"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.054802715779999997" green="0.2157095373" blue="0.44699972869999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="pageChanged:" destination="NQD-zK-M4F" eventType="valueChanged" id="ugd-28-omk"/>
+                                </connections>
+                            </pageControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" image="base1" translatesAutoresizingMaskIntoConstraints="NO" id="VF3-oc-Gx2">
+                                <rect key="frame" x="40" y="32" width="295" height="63"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Dby-Xu-Arv">
+                                <rect key="frame" x="60" y="37" width="255" height="53"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="9"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VF3-oc-Gx2" firstAttribute="leading" secondItem="VoN-OM-xcP" secondAttribute="leading" constant="40" id="2Mz-ZF-993"/>
+                            <constraint firstItem="VoN-OM-xcP" firstAttribute="trailing" secondItem="Dby-Xu-Arv" secondAttribute="trailing" constant="60" id="3ea-YV-skZ"/>
+                            <constraint firstItem="gTU-FK-LDa" firstAttribute="centerX" secondItem="p6o-Mq-0UK" secondAttribute="centerX" id="3yM-bX-nb3"/>
+                            <constraint firstItem="WuV-GR-2I6" firstAttribute="top" secondItem="VF3-oc-Gx2" secondAttribute="bottom" constant="5" id="98a-mT-bTX"/>
+                            <constraint firstItem="Dby-Xu-Arv" firstAttribute="leading" secondItem="VoN-OM-xcP" secondAttribute="leading" constant="60" id="O4s-Hd-ZWc"/>
+                            <constraint firstItem="WuV-GR-2I6" firstAttribute="centerX" secondItem="p6o-Mq-0UK" secondAttribute="centerX" id="Rz3-Cy-PnD"/>
+                            <constraint firstItem="WuV-GR-2I6" firstAttribute="top" secondItem="Dby-Xu-Arv" secondAttribute="bottom" constant="10" id="U0L-n6-XFo"/>
+                            <constraint firstItem="VoN-OM-xcP" firstAttribute="trailing" secondItem="VF3-oc-Gx2" secondAttribute="trailing" constant="40" id="UnF-4B-4dp"/>
+                            <constraint firstItem="gTU-FK-LDa" firstAttribute="top" secondItem="VoN-OM-xcP" secondAttribute="top" constant="5" id="cuz-p8-SDg"/>
+                            <constraint firstItem="VoN-OM-xcP" firstAttribute="bottom" secondItem="WuV-GR-2I6" secondAttribute="bottom" constant="5" id="hhK-Un-y4g"/>
+                            <constraint firstItem="VF3-oc-Gx2" firstAttribute="top" secondItem="gTU-FK-LDa" secondAttribute="bottom" constant="5" id="wbP-Yf-4Dd"/>
+                            <constraint firstItem="Dby-Xu-Arv" firstAttribute="top" secondItem="gTU-FK-LDa" secondAttribute="bottom" constant="10" id="zhO-uW-dhM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VoN-OM-xcP"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="120"/>
+                    <connections>
+                        <outlet property="labelInfo" destination="Dby-Xu-Arv" id="bVN-C8-8JC"/>
+                        <outlet property="page" destination="WuV-GR-2I6" id="sHv-0D-U3T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EfY-pr-hG8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-567.20000000000005" y="181.70914542728636"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="base1" width="300" height="63"/>
+    </resources>
 </document>

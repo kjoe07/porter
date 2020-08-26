@@ -55,7 +55,7 @@ class paymentViewController: UIViewController, UIPickerViewDelegate,UIPickerView
     */
 	func numberOfComponents(in pickerView: UIPickerView) -> Int {
         if paymentArray.count == 0{
-            return 1
+            return 0
         }else{
             return 2
         }
@@ -65,7 +65,7 @@ class paymentViewController: UIViewController, UIPickerViewDelegate,UIPickerView
 	func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if paymentArray.count == 0{
              self.picker.isHidden = true
-            return 1
+            return 0
         }else{
              self.picker.isHidden = false
             return paymentArray.count

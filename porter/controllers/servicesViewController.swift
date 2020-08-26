@@ -20,11 +20,12 @@ class servicesViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
 	@IBOutlet weak var continueButton: UIButton!
 	@IBOutlet weak var picker: UIPickerView!
 	@IBOutlet weak var normalButton: UIButton!
-	@IBOutlet weak var hoursPicker: UIPickerView!
+    @IBOutlet weak var relojView: UIImageView!
 	@IBOutlet weak var expressButton: UIButton!
 	@IBOutlet weak var imageWidth: NSLayoutConstraint!
-	@IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var infoNow: UILabel!
     @IBOutlet weak var destinoLabel: UILabel!
+    @IBOutlet weak var header: UIView!
     var servicio: service?
 	var simulacion: simulation?
 	var type: Int?
@@ -50,6 +51,7 @@ class servicesViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             loadService(with: id!.description)
         }
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        header.setBorder(color: darkBlue, width: 2.0, radius: 0.0)
     }
 	override func viewDidAppear(_ animated: Bool) {
 		let tipView = EasyTipView(text: "Para servicios para una hora y día definido tenemos descuento", preferences: preferences)
@@ -106,7 +108,7 @@ class servicesViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                 let firsdate = formater.string(from: dateArray[0])
                 let today = formater.string(from: Date())
                 if today == firsdate {
-                    return "Dentro de 2 horas"
+                    return "En 2 horas"
                 }else{
                     let i = picker.selectedRow(inComponent: 0)
                     return matrix[i][row]
@@ -157,9 +159,11 @@ class servicesViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
 	}
 	func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
 		if component == 0{
-			return UIScreen.main.bounds.width / 3
+            return 150
+			//return UIScreen.main.bounds.width / 3
 		}else{
-			return UIScreen.main.bounds.width - UIScreen.main.bounds.width / 3
+            return 150
+			//return UIScreen.main.bounds.width - UIScreen.main.bounds.width / 3
 		}
 	}
 	
@@ -193,6 +197,9 @@ class servicesViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
 		normalButton.backgroundColor = .white
 		normalButton.setBorder(color: gray, width: 2.0, radius: 12.0)
 		self.picker.isHidden = true
+        self.relojView.isHidden = false
+        self.infoNow.isHidden = false
+        header.isHidden = true
 		//self.hoursPicker.isHidden = true
 	}	
 	@IBAction func normalAction(_ sender: UIButton) {
@@ -213,16 +220,19 @@ class servicesViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
 		normalButton.backgroundColor = darkBlue
 		normalButton.setBorder(color: darkBlue, width: 0, radius: 12)
 		self.picker.isHidden = false
+        self.relojView.isHidden = true
+        self.infoNow.isHidden = true
+        header.isHidden = false
 		//self.hoursPicker.isHidden = false
 	}
 	@IBAction func pickerChanged(_ sender: UIDatePicker) {
-		if sender == datePicker{
-			let value = sender.date
-			//hoursPicker.date = Calendar.current.date(byAdding: .hour, value: 1, to: value)!
-			let initHour = Calendar.current.dateComponents([.hour], from: value)
-			let endHour = Calendar.current.dateComponents([.hour], from: Calendar.current.date(byAdding: .hour, value: 1, to: value)!)
-			self.pickHour =  initHour.hour!.description + " - " + endHour.hour!.description//.description + " - " + ().description
-		}
+//        if sender == datePicker{
+//            let value = sender.date
+//            //hoursPicker.date = Calendar.current.date(byAdding: .hour, value: 1, to: value)!
+//            let initHour = Calendar.current.dateComponents([.hour], from: value)
+//            let endHour = Calendar.current.dateComponents([.hour], from: Calendar.current.date(byAdding: .hour, value: 1, to: value)!)
+//            self.pickHour =  initHour.hour!.description + " - " + endHour.hour!.description//.description + " - " + ().description
+//        }
 		//UIApplication.shared.isNetworkActivityIndicatorVisible = true
 //		let date = (sender as! UIDatePicker).date
 //		let calendar = Calendar.current
@@ -325,9 +335,16 @@ class servicesViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                             self.hud.dismiss()
                         }
 					}
-				}
+                }else{
+                    guard let self = self else {return}
+                    self.hud.dismiss()
+                    self.showError(tittle: "No quedan Horas disponibles para el dia seleccionado", error: "Por favor escoja Otra día.")
+                }
 			}catch{
-				
+                if let self = self{
+                    self.hud.dismiss()
+                    self.showError(tittle: "Respuesta Erronea desde la BD", error: error.localizedDescription)
+                }
 			}
 			}, failure: { error in
                 self.hud.textLabel.text = "Error en al cargar datos intente mas tarde"
@@ -365,7 +382,7 @@ class servicesViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         if (params!["type"] as? String) == "PER_HOURS"{
             destinyLabel.text = "Horas: " + (params!["hours"] as? Int)!.description
         }else{
-            destinyLabel.text = "Destino: " + (params!["destination_address"] as! String)
+            destinyLabel.text = (params!["destination_address"] as! String)
         }
         phonelabe.text = requestManager.instance.user.phoneNumber!
         //picker.minimumDate = Date()

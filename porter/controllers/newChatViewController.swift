@@ -182,96 +182,137 @@ class newChatViewController: UIViewController, UITableViewDelegate, UITableViewD
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		if chats![indexPath.row].attachment == 6 {
-			if chats![indexPath.row].senderId != requestManager.instance.user.id?.description{
-				let cell = tableView.dequeueReusableCell(withIdentifier: "cell3") as! incomingText
-				if !isForo{
-					if let url = URL(string: url!){
-						cell.avatar.sd_setImage(with: url, completed: nil)
-					}else{
-						cell.avatar.image = #imageLiteral(resourceName: "icoPerfil")
-					}
-					cell.avatar.isUserInteractionEnabled = true
-					cell.avatar.addGestureRecognizer(gesture)
-					self.configureAvatar(in: cell)
-					cell.name.text = chats![indexPath.row].senderName ?? ""
-				}
-				self.removeView(with: 1000, in: cell)
-				self.removeView(with: 2000, in: cell)
-				showOutgoingMessage(text: chats![indexPath.row].body, cell: cell, incoming: true)
-				let body = cell.viewWithTag(2000) as! UILabel
-				body.text = chats![indexPath.row].body
-				return cell
-			}else{
-				let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! outgoingText
-				self.removeView(with: 1000, in: cell)
-				self.removeView(with: 2000, in: cell)
-				if let imagen = requestManager.instance.user.image{
-					cell.avatar.sd_setImage(with: URL(string: Router.baseURLString + imagen.path.replacingOccurrences(of: "images", with: "/photo")), completed: nil)
-				}else{
-					cell.avatar.image = UIImage(named: "Porter")
-				}
-				cell.name.text = chats![indexPath.row].senderName ?? ""
-				self.configureAvatar(in: cell)
-				showOutgoingMessage(text: chats![indexPath.row].body, cell: cell, incoming: false)
-				let body = cell.viewWithTag(2000) as! UILabel
-				body.text = chats![indexPath.row].body
-				return cell
-			}
-		}else{
-			if chats![indexPath.row].senderId != requestManager.instance.user.id?.description{
-				let cell = tableView.dequeueReusableCell(withIdentifier: "cell4") as! incomingImage
-				if let view = cell.viewWithTag(3000){
-					(view as! UIImageView).sd_cancelCurrentImageLoad()
-				}
-				if !isForo{
-					if let url = URL(string: self.url!){
-						cell.avatar.sd_setImage(with: url, completed: nil)
-						cell.avatar.sd_setShowActivityIndicatorView(true)
-						cell.avatar.sd_setIndicatorStyle(.gray)
-					}else{
-						cell.avatar.image = #imageLiteral(resourceName: "icoPerfil")
-					}
-					cell.name.text = chats![indexPath.row].senderName ?? ""
-					cell.avatar.isUserInteractionEnabled = true
-					cell.avatar.addGestureRecognizer(gesture)
-				}
-				self.configureAvatar(in: cell)
-				
-				self.removeView(with: 3000, in: cell)
-				showIncomingMessage(cell: cell, incoming: true)
-				if let urlString = chats![indexPath.row].imageURL{
-					if let url = URL(string: urlString){
-						setImage(with: url, in: cell)
-					}
-				}
-				return cell
-			}else{
-				let cell = tableView.dequeueReusableCell(withIdentifier: "cell2") as! outGoingImage
-				if let view = cell.viewWithTag(3000){
-					(view as! UIImageView).sd_cancelCurrentImageLoad()
-				}
-				if let imagen = requestManager.instance.user.image{
-					cell.avatar.sd_setImage(with: URL(string: Router.baseURLString + imagen.path.replacingOccurrences(of: "images", with: "/photo")), completed: nil)
-					cell.avatar.sd_setShowActivityIndicatorView(true)
-					cell.avatar.sd_setIndicatorStyle(.gray)
-				}else{
-					cell.avatar.image = #imageLiteral(resourceName: "icoPerfil")
-				}
-				cell.name.text = chats![indexPath.row].senderName ?? ""
-				cell.avatar.sd_cancelCurrentImageLoad()
-				self.configureAvatar(in: cell)
-				if let image = chats![indexPath.row].imagen{
-					cell.imagen.image = image
-				}else{
-					self.removeView(with: 1000, in: cell)
-					let url = URL(string: chats![indexPath.row].imageURL!);	print("the url \(String(describing: url))")
-					showIncomingMessage(cell: cell, incoming: false)
-					setImage(with: url!, in: cell)
-				}
-				return cell
-			}
-		}
+//        if chats![indexPath.row].attachment == 6 {
+//            if chats![indexPath.row].senderId != requestManager.instance.user.id?.description{
+//                let cell = tableView.dequeueReusableCell(withIdentifier: "cell3") as! incomingText
+//                if !isForo{
+//                    if let url = URL(string: url!){
+//                        cell.avatar.sd_setImage(with: url, completed: nil)
+//                    }else{
+//                        cell.avatar.image = #imageLiteral(resourceName: "icoPerfil")
+//                    }
+//                    cell.avatar.isUserInteractionEnabled = true
+//                    cell.avatar.addGestureRecognizer(gesture)
+//                    self.configureAvatar(in: cell)
+//                    cell.name.text = chats![indexPath.row].senderName ?? ""
+//                }
+//                self.removeView(with: 1000, in: cell)
+//                self.removeView(with: 2000, in: cell)
+//                showOutgoingMessage(text: chats![indexPath.row].body, cell: cell, incoming: true)
+//                let body = cell.viewWithTag(2000) as! UILabel
+//                body.text = chats![indexPath.row].body
+//                return cell
+//            }else{
+//                let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! outgoingText
+//                self.removeView(with: 1000, in: cell)
+//                self.removeView(with: 2000, in: cell)
+//                if let imagen = requestManager.instance.user.image{
+//                    cell.avatar.sd_setImage(with: URL(string: Router.baseURLString + imagen.path.replacingOccurrences(of: "images", with: "/photo")), completed: nil)
+//                }else{
+//                    cell.avatar.image = UIImage(named: "Porter")
+//                }
+//                cell.name.text = chats![indexPath.row].senderName ?? ""
+//                self.configureAvatar(in: cell)
+//                showOutgoingMessage(text: chats![indexPath.row].body, cell: cell, incoming: false)
+//                let body = cell.viewWithTag(2000) as! UILabel
+//                body.text = chats![indexPath.row].body
+//                return cell
+//            }
+//        }else{
+//            if chats![indexPath.row].senderId != requestManager.instance.user.id?.description{
+//                let cell = tableView.dequeueReusableCell(withIdentifier: "cell4") as! incomingImage
+//                if let view = cell.viewWithTag(3000){
+//                    (view as! UIImageView).sd_cancelCurrentImageLoad()
+//                }
+//                if !isForo{
+//
+//                    if let url = url{
+//                        if let myurl = URL(string: url){
+//                        cell.avatar.sd_setImage(with: myurl, completed: nil)
+//                        cell.avatar.sd_setShowActivityIndicatorView(true)
+//                        cell.avatar.sd_setIndicatorStyle(.gray)
+//                        }else{
+//                            cell.avatar.image = #imageLiteral(resourceName: "icoPerfil")
+//                        }
+//                    }else{
+//                        cell.avatar.image = #imageLiteral(resourceName: "icoPerfil")
+//                    }
+//                    cell.name.text = chats![indexPath.row].senderName ?? ""
+//                    cell.avatar.isUserInteractionEnabled = true
+//                    cell.avatar.addGestureRecognizer(gesture)
+//                }
+//                self.configureAvatar(in: cell)
+//
+//                self.removeView(with: 3000, in: cell)
+//                showIncomingMessage(cell: cell, incoming: true)
+//                if let urlString = chats![indexPath.row].imageURL{
+//                    if let url = URL(string: urlString){
+//                        setImage(with: url, in: cell)
+//                    }
+//                }
+//                return cell
+//            }else{
+//                let cell = tableView.dequeueReusableCell(withIdentifier: "cell2") as! outGoingImage
+//                if let view = cell.viewWithTag(3000){
+//                    (view as! UIImageView).sd_cancelCurrentImageLoad()
+//                }
+//                if let imagen = requestManager.instance.user.image{
+//                    cell.avatar.sd_setImage(with: URL(string: Router.baseURLString + imagen.path.replacingOccurrences(of: "images", with: "/photo")), completed: nil)
+//                    cell.avatar.sd_setShowActivityIndicatorView(true)
+//                    cell.avatar.sd_setIndicatorStyle(.gray)
+//                }else{
+//                    cell.avatar.image = #imageLiteral(resourceName: "icoPerfil")
+//                }
+//                cell.name.text = chats![indexPath.row].senderName ?? ""
+//                cell.avatar.sd_cancelCurrentImageLoad()
+//                self.configureAvatar(in: cell)
+//                if let image = chats![indexPath.row].imagen{
+//                    cell.imagen.image = image
+//                }else{
+//                    self.removeView(with: 1000, in: cell)
+//                    let url = URL(string: chats![indexPath.row].imageURL!);    print("the url \(String(describing: url))")
+//                    showIncomingMessage(cell: cell, incoming: false)
+//                    setImage(with: url!, in: cell)
+//                }
+//                return cell
+//            }
+//        }
+       //        if chats![indexPath.row].attachment == 6 {
+            if chats![indexPath.row].senderId != requestManager.instance.user.id?.description{
+                let cell = tableView.dequeueReusableCell(withIdentifier: "cell3") as! incomingText
+                if !isForo{
+                    if let url = URL(string: url ?? ""){
+                        cell.avatar.sd_setImage(with: url, completed: nil)
+                    }else{
+                        cell.avatar.image = UIImage(named: "Porter")
+                    }
+                    cell.avatar.isUserInteractionEnabled = true
+                    cell.avatar.addGestureRecognizer(gesture)
+                    self.configureAvatar(in: cell)
+                    cell.name.text = chats![indexPath.row].senderName ?? ""
+                }
+                self.removeView(with: 1000, in: cell)
+                self.removeView(with: 2000, in: cell)
+                showOutgoingMessage(text: chats![indexPath.row].body, cell: cell, incoming: true)
+                let body = cell.viewWithTag(2000) as! UILabel
+                body.text = chats![indexPath.row].body
+                return cell
+            }else{
+                let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! outgoingText
+                self.removeView(with: 1000, in: cell)
+                self.removeView(with: 2000, in: cell)
+                if let imagen = requestManager.instance.user.image{
+                    cell.avatar.sd_setImage(with: URL(string: Router.baseURLString + imagen.path.replacingOccurrences(of: "images", with: "/photo")), completed: nil)
+                }else{
+                    cell.avatar.image = UIImage(named: "Porter")
+                }
+                cell.name.text = chats![indexPath.row].senderName ?? ""
+                self.configureAvatar(in: cell)
+                showOutgoingMessage(text: chats![indexPath.row].body, cell: cell, incoming: false)
+                let body = cell.viewWithTag(2000) as! UILabel
+                body.text = chats![indexPath.row].body
+                return cell
+            }
 	}
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 		if chats![indexPath.row].attachment == 2{

@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -26,7 +26,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>8</string>
+	<string>1</string>
 	<key>FacebookAppID</key>
 	<string>213926089441239</string>
 	<key>FacebookDisplayName</key>
@@ -53,6 +53,12 @@
 	<string>Permitir Localizacion</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>permiso para acceder a tus fotos para establecer la foto del perfil</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>montserrat_bold.otf</string>
+		<string>montserrat_medium.otf</string>
+		<string>montserrat_regular.otf</string>
+	</array>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>

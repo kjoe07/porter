@@ -14,7 +14,11 @@ class dataViewController: UIViewController,GalleryControllerDelegate, UITextFiel
 	
 	@IBOutlet weak var name: UITextField!
 	@IBOutlet weak var lastname: UITextField!
-	@IBOutlet weak var phone: UITextField!
+    @IBOutlet weak var phone: UITextField!{
+        didSet{
+           phone?.addDoneCancelToolbar(onDone: (target: self, action: #selector(self.aceptAction(_:))))
+        }
+    }
 	@IBOutlet weak var nextButton: UIButton!
 	@IBOutlet weak var nameView: UIView!
 	@IBOutlet weak var lastnameView: UIView!
@@ -170,10 +174,11 @@ class dataViewController: UIViewController,GalleryControllerDelegate, UITextFiel
 				if let self = self{
 					self.ico.image = image
 					self.imageChanged = true
-					self.ico.layer.cornerRadius = (self.ico.frame.width) / 2
+					self.ico.layer.cornerRadius = self.ico.frame.width / 2
 					self.ico.layer.borderColor = UIColor.white.cgColor
 					self.ico.layer.borderWidth = 2.0
 					self.ico.clipsToBounds = true
+                    self.ico.contentMode = .scaleAspectFill
 				}
 			}else{
 				print("no image")

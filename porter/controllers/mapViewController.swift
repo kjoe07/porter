@@ -61,6 +61,9 @@ class mapViewController: UIViewController,GMSMapViewDelegate {
 		} catch {
 			NSLog("One or more of the map styles failed to load. \(error)")
 		}
+        if servicio != nil {
+            id = servicio!.id!.description
+        }
 		let query = secondaryDb.reference().child("locations").child(id!).queryOrderedByValue()
 		//let query = Constants.refs.databaselocation.child(id!).queryOrderedByValue()//.queryLimited(toLast: 10)
 		_ = query.observe(.childAdded, with: { [weak self] snapshot in

@@ -72,6 +72,7 @@ class homeViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerD
 		servicioOrigen.layer.cornerRadius = 12
 		punto1View.layer.cornerRadius = 12
 		horasView.layer.cornerRadius = 12
+        mapView.settings.allowScrollGesturesDuringRotateOrZoom = false
 		let revealViewController = self.revealViewController()
         revealViewController?.rearViewRevealWidth = ((UIScreen.main.bounds.width * 74.6875) / 100)
 		if revealViewController != nil {
@@ -273,24 +274,31 @@ class homeViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerD
 				//continuar.isSelected = true
 				//continuar.isUserInteractionEnabled = false
 				UIApplication.shared.isNetworkActivityIndicatorVisible = true
-				routeClient.instance.simulate(params: params, success: {[unowned self] data in
-					do{
-						let decoder = try JSONDecoder().decode(simulationResponse.self, from: data)
-						if decoder.success != nil && decoder.success!{
-							self.simulacion = decoder.data
-							print("the data is \(self.simulacion.debugDescription)")
-							UIApplication.shared.isNetworkActivityIndicatorVisible = false
-							//self.continuar.isUserInteractionEnabled = true
+				routeClient.instance.simulate(params: params, success: {[weak self] data in
+                    if let self = self {
+                        self.hud.textLabel.text = "Procesando respuesta"
+                        let start = Date()
+                        do{
+                            let decoder = try JSONDecoder().decode(simulationResponse.self, from: data)
+                            print(start.timeIntervalSinceNow.description)
+                            if decoder.success != nil && decoder.success!{
+                                self.simulacion = decoder.data
+                                print("the data is \(self.simulacion.debugDescription)")
+                                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                                //self.continuar.isUserInteractionEnabled = true
+                                self.hud.dismiss()
+                                self.performSegue(withIdentifier: "prices", sender: self)
+                            }else if decoder.code != nil {
+                                self.showError(tittle: "El destino excede la distancia máxima", error: "Escoja nuevo destino por favor.")
+                            }
+                        }catch{
+                            print("error in decode \(error.localizedDescription)")
+                            UIApplication.shared.isNetworkActivityIndicatorVisible = false
                             self.hud.dismiss()
-							self.performSegue(withIdentifier: "prices", sender: self)
-						}
-					}catch{
-						print("error in decode \(error.localizedDescription)")
-						UIApplication.shared.isNetworkActivityIndicatorVisible = false
-                        self.hud.dismiss()
-						//self.continuar.isUserInteractionEnabled = true
-						self.showError(tittle: "Error al leer los datos de la peticion", error: error.localizedDescription)
-					}
+                            //self.continuar.isUserInteractionEnabled = true
+                            self.showError(tittle: "Error al leer los datos de la peticion", error: error.localizedDescription)
+                        }
+                    }
 				}, failure: {[weak self] error in
 					if let self = self{
 						self.continuar.isSelected = false
@@ -431,8 +439,9 @@ class homeViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerD
                 let mapsBound = GMSCoordinateBounds(coordinate: punto1Cordinate!, coordinate: punto2Cordinate!)
                 //self.mapView.camera(for: mapsBound, insets: <#T##UIEdgeInsets#>)
                // self.mapView.cameraTargetBounds = mapsBound
-                self.mapView.animate(with: GMSCameraUpdate.fit(mapsBound, withPadding: 120.0))
+               // self.mapView.animate(with: GMSCameraUpdate.fit(mapsBound, withPadding: 120.0))
                 //self.mapView.camera = GMSCameraPosition.
+                self.mapView.animate(with: GMSCameraUpdate.fit(mapsBound))
                 
             }
             
@@ -465,6 +474,7 @@ class homeViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerD
         self.servicioOrigen.isHidden = true
         horasView.isHidden = true
         selectButton.setTitle("Origen y Destino", for: .normal)
+        self.mapView.clear()
 	}
 	@IBAction func longPress(_ sender: UITapGestureRecognizer) {
 		debugPrint("You tapped at YES")
@@ -535,6 +545,7 @@ class homeViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerD
                 if let resData = swiftyJsonVar["routes"].arrayObject {
                     let routes = resData as! [[String: AnyObject]]
                     /* loop the routes */
+                    var bounds = GMSCoordinateBounds()
                     if routes.count > 0 {
                         for rts in routes {
                             /* get the point */
@@ -544,6 +555,10 @@ class homeViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerD
                             let polyline = GMSPolyline.init(path: path)
                             polyline.strokeWidth = 2
                             polyline.strokeColor = darkBlue
+                            
+                            let bounds = GMSCoordinateBounds(path: path!)
+                            self.mapView!.animate(with: GMSCameraUpdate.fit(bounds, withPadding: 30.0))
+                            //bounds = bounds.includingCoordinate(_path.coordinate(at: ))
                             polyline.map = self.mapView
                         }
                     }

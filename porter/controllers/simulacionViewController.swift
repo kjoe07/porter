@@ -89,9 +89,9 @@ class simulacionViewController: UIViewController {
 //		let thumbRect = sender.thumbRect(forBounds: sender.bounds, trackRect: trackRect, value: sender.value)
 		//self.timeLabel.center = CGPoint(x: thumbRect.midX, y: sender.frame.minY - 10)
 		if simulacion!.service == "PER_HOURS"{
-			self.timeLabel.text = String(format: "%.0f", sender.value) + " h" // ( (Double(simulacion!.durations!.timeInHours!)!) > 1.0 ? " horas" : " hora")
+			self.timeLabel.text = String(format: "%.0f h", sender.value) //+ " h" // ( (Double(simulacion!.durations!.timeInHours!)!) > 1.0 ? " horas" : " hora")
 		}else{
-			self.timeLabel.text = String(format: "%.0f", sender.value) + " m" //( (Double(simulacion!.durations!.timeInHours!)!) > 1.0 ? " m" : " Minuto")
+			self.timeLabel.text = String(format: "%.0f m", sender.value)// + " m" //( (Double(simulacion!.durations!.timeInHours!)!) > 1.0 ? " m" : " Minuto")
 		}
 		
 	}

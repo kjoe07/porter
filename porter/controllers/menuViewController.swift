@@ -23,6 +23,7 @@ class menuViewController: UIViewController,MFMailComposeViewControllerDelegate {
 			avatar.layer.borderColor = UIColor.white.cgColor
 			avatar.layer.cornerRadius = avatar.frame.width / 2
 			avatar.clipsToBounds = true
+            avatar.contentMode = .scaleAspectFill
 		}
 		reservaPorter.layer.cornerRadius = 12
 		reservaPorter.clipsToBounds = true
@@ -45,8 +46,16 @@ class menuViewController: UIViewController,MFMailComposeViewControllerDelegate {
 		self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
 		self.navigationController?.navigationBar.shadowImage = UIImage()
 		self.navigationController?.navigationBar.isTranslucent = true
+        self.revealViewController().view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        self.revealViewController().frontViewController.revealViewController().tapGestureRecognizer()
+        self.revealViewController().frontViewController.view.isUserInteractionEnabled = false
 	}
-
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.revealViewController().frontViewController.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        self.revealViewController().frontViewController.view.isUserInteractionEnabled = true
+    }
     /*
     // MARK: - Navigation
 
@@ -91,6 +100,7 @@ class menuViewController: UIViewController,MFMailComposeViewControllerDelegate {
 		print(UIDevice.current.systemVersion)
 		present(picker, animated: true, completion: nil)
 	}
+
 	func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
 		dismiss(animated: true, completion: nil)
 	}

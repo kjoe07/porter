@@ -130,9 +130,15 @@ class portersViewController: UIViewController, UITableViewDelegate,UITableViewDa
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.delete) {
             //self.numbers.remove(at: indexPath.row)
-            self.services.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-            self.deleteService(with: self.services[indexPath.row].id!.description)
+            print("el row a elimniar es \(indexPath.row)")
+            if  services.count > indexPath.row{
+                self.services.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+                self.deleteService(with: self.services[indexPath.row].id!.description)
+            }else{
+                self.showError(tittle: "Fallo al eliminar", error: "")
+            }
+            
         }
     }
 //    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
@@ -176,6 +182,11 @@ class portersViewController: UIViewController, UITableViewDelegate,UITableViewDa
                 let decoder = try JSONDecoder().decode(profile.self, from: data)
                 if decoder.id != nil {
                     print("borrado correcto")
+                }else{
+                    if let self = self {
+                        self.showError(tittle: "Aviso", error: "El servicio no se puede borrar, debido a su estado.")
+                        self.loadData()
+                    }
                 }
             }catch{
                 print(error.localizedDescription)

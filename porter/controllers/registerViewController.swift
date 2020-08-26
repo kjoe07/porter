@@ -131,7 +131,7 @@ class registerViewController: UIViewController, UITextFieldDelegate {
     */
 	@IBAction func facebookLogin(_ sender: Any) {
 		let loginManager = LoginManager()
-		loginManager.logIn(readPermissions: [.publicProfile,.email], viewController: self, completion: { (loginResult) in
+		loginManager.logIn(readPermissions: [.publicProfile,.email], viewController: self, completion: { [weak self] (loginResult) in
 			switch loginResult {
 			case .failed(let error):
 				print(error)
@@ -140,7 +140,12 @@ class registerViewController: UIViewController, UITextFieldDelegate {
 			case .success(_ , _, let accessToken): //let grantedPermissions,let declinedPermissions
 				if accessToken.authenticationToken != ""{
 					let params = ["provider": "facebook","token": accessToken.authenticationToken ]
-					routeClient.instance.login(provider: params, success: {[weak self] data in
+                    if let self = self {
+                        self.hud.textLabel.text = "Registrando usuario con datos de Facebook"
+                        self.hud.detailTextLabel.text = "Espere un momento por favor."
+                        self.hud.show(in: self.view)
+                    }
+					routeClient.instance.login(provider: params, success: { data in
 						do {
 							let response = try JSONDecoder().decode(respuestaLogin.self, from: data)
 							print("==) ", response.profile as Any, response.token as Any)
@@ -156,19 +161,25 @@ class registerViewController: UIViewController, UITextFieldDelegate {
 									}
 									//self.setToken()
 									if requestManager.instance.user.phoneNumber == nil {
+                                        self.hud.dismiss()
 										self.performSegue(withIdentifier: "goData", sender: self)
 									}else{
+                                        self.hud.dismiss()
 										self.performSegue(withIdentifier: "loginSegue", sender: self)
 									}
 								}else{
+                                    self.hud.dismiss()
 									self.showError(tittle: "Error en la Autetificacion", error: response.error.debugDescription + response.code!)
 								}
 							}
 						}catch let error as NSError{
 							print(error)
+                            guard let self = self else {return}
+                            self.hud.dismiss()
 						}
 					}, failure: {error in
-						
+                        guard let self = self else {return}
+                        self.hud.dismiss()
 					})
 				}
 			}

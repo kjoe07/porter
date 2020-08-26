@@ -36,8 +36,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
 		UNUserNotificationCenter.current().delegate = self
 		Messaging.messaging().delegate = self
         Messaging.messaging().shouldEstablishDirectChannel = true
-		//let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
-//		UNUserNotificationCenter.current().requestAuthorization(options: authOptions,completionHandler: {_, _ in })
 		UNUserNotificationCenter.current().requestAuthorization(options:[.badge, .alert, .sound], completionHandler: { _,_ in
 			
 			//application.registerForRemoteNotifications()
@@ -332,12 +330,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
             //(self.window?.rootViewController as? UITabBarController)?.selectedIndex = index
             self.window?.makeKeyAndVisible()
         }else {
-            UserDefaults.standard.set(serviceId, forKey: "aps")
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let initialViewController = storyboard.instantiateViewController(withIdentifier: "evaluate")
-            self.window?.rootViewController = initialViewController
-            //(self.window?.rootViewController as? UITabBarController)?.selectedIndex = index
+            let menuVC = storyboard.instantiateViewController(withIdentifier: "menuVC")
+            let chatVC = storyboard.instantiateViewController(withIdentifier: "evaluate") //as! newChatViewController
+            ((chatVC as! UINavigationController).topViewController as! evaluaViewController).id = serviceId //id = id
+            let mainRWVC = storyboard.instantiateViewController(withIdentifier: "SWRevealViewController") as! SWRevealViewController
+            mainRWVC.setRear(menuVC, animated: true)
+            mainRWVC.setFront(chatVC, animated: true)
+            self.window?.rootViewController = mainRWVC
             self.window?.makeKeyAndVisible()
+            
         }
     }
 
