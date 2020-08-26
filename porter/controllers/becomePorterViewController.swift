@@ -23,6 +23,7 @@ class becomePorterViewController: UIViewController,GMSAutocompleteViewController
 	@IBOutlet weak var city: UILabel!
 	@IBOutlet weak var sendButton: UIButton!
 	@IBOutlet weak var check: UISwitch!
+    var dateString = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 		nameView.setBorder(color: darkBlue, width: 0, radius: 12)
@@ -67,7 +68,7 @@ class becomePorterViewController: UIViewController,GMSAutocompleteViewController
 	
 	@IBAction func send(_ sender: Any) {
 		if name.text != "" && phone.text != "" && phone.text!.count == 9 && email.text != "" && date.text != "" && city.text != ""{
-			let params: Parameters = ["first_name": (name.text!.components(separatedBy: " ")[0]),"last_name": (name.text!.components(separatedBy: " ")[1]),"phone_number":phone.text!,"email": email.text!, "birth_date": date.text!,"city": city.text!,"has_van":(check.isOn ? "yes" : "no"),"van_type":"SMALL"]
+			let params: Parameters = ["first_name": (name.text!.components(separatedBy: " ")[0]),"last_name": (name.text!.components(separatedBy: " ")[1]),"phone_number":phone.text!,"email": email.text!, "birth_date": dateString,"city": city.text!,"has_van":(check.isOn ? "yes" : "no"),"van_type":"SMALL"]
 			routeClient.instance.evaluateWorker(params: params, success: {data in
 				do {
 					let decoder = try JSONDecoder().decode(respuestaLogin.self, from: data)
@@ -77,10 +78,10 @@ class becomePorterViewController: UIViewController,GMSAutocompleteViewController
 						self.showError(tittle: "Ocurrio un error al procesar su solicitud", error: "Por intente más tarde")
 					}
 				}catch{
-					self.showError(tittle: "Ocurrio un error al decoficar los datos", error: error.localizedDescription)
+					self.showError(tittle: "El email ya está registrado", error: "Por favor escoja otro")
 				}
 			}, failure: {error in
-				self.showError(tittle: "Ocurrio un error al procesar su solicitud", error: error.localizedDescription)
+				self.showError(tittle: "Ocurrio un error al procesar su solicitud", error: "El email ya está registrado")
 			})
 		}
 		
@@ -127,6 +128,8 @@ class becomePorterViewController: UIViewController,GMSAutocompleteViewController
 	func setDate(date: String) {
 		self.date.text = date
         self.date.textColor = .white
+        let ar = date.components(separatedBy: "-")
+        self.dateString = ar[2]+ar[1]+ar[0]
 	}
 	@IBAction func presentPicker(_ sender: Any){
 		let comoVC = datePickerViewController(nibName: "dailogView", bundle: nil)

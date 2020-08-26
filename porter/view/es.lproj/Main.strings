@@ -1,495 +1,0 @@
-
-/* Class = "UITextField"; placeholder = "Teléfono móvil"; ObjectID = "0D1-3C-Hjs"; */
-"0D1-3C-Hjs.placeholder" = "Teléfono móvil";
-
-/* Class = "UILabel"; text = "Nombre  del Porter:"; ObjectID = "0MA-cg-bBF"; */
-"0MA-cg-bBF.text" = "Nombre  del Porter:";
-
-/* Class = "UILabel"; text = "Leo"; ObjectID = "0Vf-9W-Kyw"; */
-"0Vf-9W-Kyw.text" = "Leo";
-
-/* Class = "UILabel"; text = "Label"; ObjectID = "0kY-3q-e1o"; */
-"0kY-3q-e1o.text" = "Label";
-
-/* Class = "UILabel"; text = "Precio  estimado"; ObjectID = "0rr-uy-wgr"; */
-"0rr-uy-wgr.text" = "Precio  estimado";
-
-/* Class = "UILabel"; text = "Dos Porters"; ObjectID = "12X-nW-lFW"; */
-"12X-nW-lFW.text" = "Dos Porters";
-
-/* Class = "UILabel"; text = "Perfil"; ObjectID = "14p-xz-OUG"; */
-"14p-xz-OUG.text" = "Perfil";
-
-/* Class = "UILabel"; text = "Email"; ObjectID = "19t-CX-FsZ"; */
-"19t-CX-FsZ.text" = "Email";
-
-/* Class = "UITextView"; text = "Escribe una breve descripción del trabajo realizado por el porter"; ObjectID = "1Ai-Xl-DDh"; */
-"1Ai-Xl-DDh.text" = "Escribe una breve descripción del trabajo realizado por el porter";
-
-/* Class = "UILabel"; text = "(Perfecto para mover pequeños objetos y cajas. Debes cargar y descargar tú los objetos.)"; ObjectID = "1G3-xT-hwL"; */
-"1G3-xT-hwL.text" = "(Perfecto para mover pequeños objetos y cajas. Debes cargar y descargar tú los objetos.)";
-
-/* Class = "UILabel"; text = "Reserva realizada correctamente"; ObjectID = "1WS-ql-YHV"; */
-"1WS-ql-YHV.text" = "Reserva realizada correctamente";
-
-/* Class = "UIButton"; normalTitle = "Continuar"; ObjectID = "1xe-oF-dd0"; */
-"1xe-oF-dd0.normalTitle" = "Continuar";
-
-/* Class = "UILabel"; text = "Fecha:"; ObjectID = "2SU-o3-dAD"; */
-"2SU-o3-dAD.text" = "Fecha:";
-
-/* Class = "UILabel"; text = "Fecha:"; ObjectID = "2Vs-J0-hZL"; */
-"2Vs-J0-hZL.text" = "Fecha:";
-
-/* Class = "UILabel"; text = "Precio:"; ObjectID = "3OH-kW-tA6"; */
-"3OH-kW-tA6.text" = "Precio:";
-
-/* Class = "UILabel"; text = "Ya casi terminamos, solo falta que definas tu forma de pago."; ObjectID = "3jr-O9-G8a"; */
-"3jr-O9-G8a.text" = "Ya casi terminamos, solo falta que definas tu forma de pago.";
-
-/* Class = "UILabel"; text = "(Tiempo Real)"; ObjectID = "46t-BM-1wG"; */
-"46t-BM-1wG.text" = "(Tiempo Real)";
-
-/* Class = "UIButton"; normalTitle = "Regresar"; ObjectID = "4VP-fb-ivd"; */
-"4VP-fb-ivd.normalTitle" = "Regresar";
-
-/* Class = "UITextField"; placeholder = "MM/YY"; ObjectID = "4jp-Ii-nkc"; */
-"4jp-Ii-nkc.placeholder" = "MM/YY";
-
-/* Class = "UIButton"; normalTitle = "Empezar"; ObjectID = "557-ZG-zTm"; */
-"557-ZG-zTm.normalTitle" = "Empezar";
-
-/* Class = "UITextField"; placeholder = "Ingresar email"; ObjectID = "55y-oX-a4b"; */
-"55y-oX-a4b.placeholder" = "Ingresar email";
-
-/* Class = "UILabel"; text = "Tarjeta"; ObjectID = "5Eq-BV-bzK"; */
-"5Eq-BV-bzK.text" = "Tarjeta";
-
-/* Class = "UILabel"; text = "Pagos"; ObjectID = "70d-mz-JKz"; */
-"70d-mz-JKz.text" = "Pagos";
-
-/* Class = "UILabel"; text = "Por Horas"; ObjectID = "7WT-Wh-Xk0"; */
-"7WT-Wh-Xk0.text" = "Por Horas";
-
-/* Class = "UILabel"; text = "Nombre"; ObjectID = "7kh-E6-eGu"; */
-"7kh-E6-eGu.text" = "Nombre";
-
-/* Class = "UILabel"; text = "FAQ"; ObjectID = "8Gh-td-oGO"; */
-"8Gh-td-oGO.text" = "FAQ";
-
-/* Class = "UILabel"; text = "Lugar de recogida:"; ObjectID = "8SL-CM-eOt"; */
-"8SL-CM-eOt.text" = "Lugar de recogida:";
-
-/* Class = "UINavigationItem"; title = "Simulación"; ObjectID = "8r3-tb-VW5"; */
-"8r3-tb-VW5.title" = "Simulación";
-
-/* Class = "UILabel"; text = "xx/xxxx"; ObjectID = "8y1-0E-ihw"; */
-"8y1-0E-ihw.text" = "xx/xxxx";
-
-/* Class = "UILabel"; text = "30 euros"; ObjectID = "90w-gA-kdm"; */
-"90w-gA-kdm.text" = "30 euros";
-
-/* Class = "UILabel"; text = "Label"; ObjectID = "9QK-sB-s2C"; */
-"9QK-sB-s2C.text" = "Label";
-
-/* Class = "UILabel"; text = "Label"; ObjectID = "9vS-fX-sVC"; */
-"9vS-fX-sVC.text" = "Label";
-
-/* Class = "UIButton"; normalTitle = "Crear una cuenta nueva"; ObjectID = "AOK-zD-2hy"; */
-"AOK-zD-2hy.normalTitle" = "Crear una cuenta nueva";
-
-/* Class = "UITextField"; placeholder = "Origen"; ObjectID = "B5g-Q7-Eg6"; */
-"B5g-Q7-Eg6.placeholder" = "Origen";
-
-/* Class = "UILabel"; text = "(Genial opción para mudanzas completas.  Siéntate y espera que los porters hagan el trabajo duro por tí.)"; ObjectID = "BFf-Fx-De4"; */
-"BFf-Fx-De4.text" = "(Genial opción para mudanzas completas.  Siéntate y espera que los porters hagan el trabajo duro por tí.)";
-
-/* Class = "UIButton"; normalTitle = "Continuar"; ObjectID = "BG7-Gl-InU"; */
-"BG7-Gl-InU.normalTitle" = "Continuar";
-
-/* Class = "UILabel"; text = "845672168"; ObjectID = "BIX-Cv-pTI"; */
-"BIX-Cv-pTI.text" = "845672168";
-
-/* Class = "UILabel"; text = "Carga  / Descarga:"; ObjectID = "Cj5-Jo-nN0"; */
-"Cj5-Jo-nN0.text" = "Carga  / Descarga:";
-
-/* Class = "UITextField"; placeholder = "Nombre"; ObjectID = "Dy7-6I-MDm"; */
-"Dy7-6I-MDm.placeholder" = "Nombre";
-
-/* Class = "UIButton"; normalTitle = "Escanear tarjeta"; ObjectID = "DyS-cC-gSy"; */
-"DyS-cC-gSy.normalTitle" = "Escanear tarjeta";
-
-/* Class = "UILabel"; text = "Hasta:"; ObjectID = "El4-nP-mmh"; */
-"El4-nP-mmh.text" = "Hasta:";
-
-/* Class = "UILabel"; text = "Label"; ObjectID = "F14-4m-WvV"; */
-"F14-4m-WvV.text" = "Label";
-
-/* Class = "UILabel"; text = "Crea una contraseña nueva"; ObjectID = "F3y-uF-vf9"; */
-"F3y-uF-vf9.text" = "Crea una contraseña nueva";
-
-/* Class = "UITextField"; placeholder = "Ingresar email"; ObjectID = "FjH-Ni-Lvj"; */
-"FjH-Ni-Lvj.placeholder" = "Ingresar email";
-
-/* Class = "UILabel"; text = "20% de descuento"; ObjectID = "Fpe-HU-xl8"; */
-"Fpe-HU-xl8.text" = "20% de descuento";
-
-/* Class = "UILabel"; text = "Esto es sólo un estimado"; ObjectID = "GgZ-Ho-OU9"; */
-"GgZ-Ho-OU9.text" = "Esto es sólo un estimado";
-
-/* Class = "UILabel"; text = "Se ha producido una subida del precio final del servicio producida por el incremento del tiempo de carga / descarga"; ObjectID = "GzS-lf-erX"; */
-"GzS-lf-erX.text" = "Se ha producido una subida del precio final del servicio producida por el incremento del tiempo de carga / descarga";
-
-/* Class = "UIButton"; normalTitle = "Acceder"; ObjectID = "ILi-kQ-cTV"; */
-"ILi-kQ-cTV.normalTitle" = "Acceder";
-
-/* Class = "UILabel"; text = "Escoja el Método de pago"; ObjectID = "IUI-Jx-Xvl"; */
-"IUI-Jx-Xvl.text" = "Escoja el Método de pago";
-
-/* Class = "UILabel"; text = "10 min (estimado)"; ObjectID = "Kfo-Dp-nG6"; */
-"Kfo-Dp-nG6.text" = "10 min (estimado)";
-
-/* Class = "UILabel"; text = "00 : 02 : 00"; ObjectID = "LQZ-Ht-auc"; */
-"LQZ-Ht-auc.text" = "00 : 02 : 00";
-
-/* Class = "UILabel"; text = "25 min (estimado)"; ObjectID = "LvP-xT-oMu"; */
-"LvP-xT-oMu.text" = "25 min (estimado)";
-
-/* Class = "UILabel"; text = "30 euros"; ObjectID = "LyC-Nk-ldt"; */
-"LyC-Nk-ldt.text" = "30 euros";
-
-/* Class = "UIButton"; normalTitle = "Guardar"; ObjectID = "MIW-qT-BDa"; */
-"MIW-qT-BDa.normalTitle" = "Guardar";
-
-/* Class = "UILabel"; text = "En cualquier momento puedes cambiar el método de  pago elegido"; ObjectID = "MeY-Vy-jPb"; */
-"MeY-Vy-jPb.text" = "En cualquier momento puedes cambiar el método de  pago elegido";
-
-/* Class = "UILabel"; text = "Limpieza"; ObjectID = "MrQ-iB-lDO"; */
-"MrQ-iB-lDO.text" = "Limpieza";
-
-/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "Mu5-nX-kf9"; */
-"Mu5-nX-kf9.title" = "Item";
-
-/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "Nsx-AS-DFE"; */
-"Nsx-AS-DFE.title" = "Item";
-
-/* Class = "UILabel"; text = "Conviértete en  Porter"; ObjectID = "OZ0-D7-t62"; */
-"OZ0-D7-t62.text" = "Conviértete en  Porter";
-
-/* Class = "UILabel"; text = "55 euros"; ObjectID = "Pcb-sk-mMx"; */
-"Pcb-sk-mMx.text" = "55 euros";
-
-/* Class = "UILabel"; text = "23  /  7 /  2018       10:00-11:00"; ObjectID = "PoE-rk-xIC"; */
-"PoE-rk-xIC.text" = "23  /  7 /  2018       10:00-11:00";
-
-/* Class = "UITextField"; placeholder = "Destino"; ObjectID = "Pwj-fg-q3D"; */
-"Pwj-fg-q3D.placeholder" = "Destino";
-
-/* Class = "UILabel"; text = "Label"; ObjectID = "QQI-BR-6FY"; */
-"QQI-BR-6FY.text" = "Label";
-
-/* Class = "UIButton"; normalTitle = "Ver mapa"; ObjectID = "R56-rc-eVZ"; */
-"R56-rc-eVZ.normalTitle" = "Ver mapa";
-
-/* Class = "UILabel"; text = "Label"; ObjectID = "RN9-0c-YFD"; */
-"RN9-0c-YFD.text" = "Label";
-
-/* Class = "UILabel"; text = "Apellidos"; ObjectID = "RX7-9M-JJl"; */
-"RX7-9M-JJl.text" = "Apellidos";
-
-/* Class = "UIButton"; normalTitle = "Servicio por horas"; ObjectID = "SQ1-iR-FD0"; */
-"SQ1-iR-FD0.normalTitle" = "Servicio por horas";
-
-/* Class = "UILabel"; text = "Destino:"; ObjectID = "SlK-SK-ars"; */
-"SlK-SK-ars.text" = "Destino:";
-
-/* Class = "UILabel"; text = "76 €"; ObjectID = "SuM-EW-rsZ"; */
-"SuM-EW-rsZ.text" = "76 €";
-
-/* Class = "UILabel"; text = "Label"; ObjectID = "SyL-KO-au4"; */
-"SyL-KO-au4.text" = "Label";
-
-/* Class = "UILabel"; text = "xxxx xxxx xxxx xxxx"; ObjectID = "TD5-vV-rDB"; */
-"TD5-vV-rDB.text" = "xxxx xxxx xxxx xxxx";
-
-/* Class = "UIButton"; normalTitle = "Registro"; ObjectID = "TDb-0P-4J8"; */
-"TDb-0P-4J8.normalTitle" = "Registro";
-
-/* Class = "UILabel"; text = "Desde:"; ObjectID = "TFv-wH-D2U"; */
-"TFv-wH-D2U.text" = "Desde:";
-
-/* Class = "UIButton"; normalTitle = "Continuar"; ObjectID = "TKJ-eC-LLH"; */
-"TKJ-eC-LLH.normalTitle" = "Continuar";
-
-/* Class = "UILabel"; text = "DETALLES DEL SERVICIO"; ObjectID = "U5c-eF-AdV"; */
-"U5c-eF-AdV.text" = "DETALLES DEL SERVICIO";
-
-/* Class = "UILabel"; text = "¿Tienes una furgoneta y la usarías con Porter?"; ObjectID = "Ujm-cv-Wsd"; */
-"Ujm-cv-Wsd.text" = "¿Tienes una furgoneta y la usarías con Porter?";
-
-/* Class = "UILabel"; text = "Trayecto Origen / Destino:"; ObjectID = "Ult-qS-zcB"; */
-"Ult-qS-zcB.text" = "Trayecto Origen / Destino:";
-
-/* Class = "UILabel"; text = "Trabaja cuando quieras"; ObjectID = "Us7-DA-TTC"; */
-"Us7-DA-TTC.text" = "Trabaja cuando quieras";
-
-/* Class = "UILabel"; text = "Label"; ObjectID = "UuQ-7A-a6P"; */
-"UuQ-7A-a6P.text" = "Label";
-
-/* Class = "UIButton"; normalTitle = "Aceptar"; ObjectID = "WCU-fc-e9D"; */
-"WCU-fc-e9D.normalTitle" = "Aceptar";
-
-/* Class = "UILabel"; text = "Label"; ObjectID = "WEv-E1-OXQ"; */
-"WEv-E1-OXQ.text" = "Label";
-
-/* Class = "UILabel"; text = "Label"; ObjectID = "WaZ-bN-zV5"; */
-"WaZ-bN-zV5.text" = "Label";
-
-/* Class = "UIButton"; normalTitle = "Continuar"; ObjectID = "Wjh-YU-1bN"; */
-"Wjh-YU-1bN.normalTitle" = "Continuar";
-
-/* Class = "UILabel"; text = "15 euros"; ObjectID = "Wwu-p3-mwK"; */
-"Wwu-p3-mwK.text" = "15 euros";
-
-/* Class = "UILabel"; text = "En este apartado podrás consultar el historial de los últimos Portes"; ObjectID = "XNj-lc-kUs"; */
-"XNj-lc-kUs.text" = "En este apartado podrás consultar el historial de los últimos Portes";
-
-/* Class = "UIButton"; normalTitle = "Editar"; ObjectID = "Xus-cd-iVO"; */
-"Xus-cd-iVO.normalTitle" = "Editar";
-
-/* Class = "UILabel"; text = "34'"; ObjectID = "XwD-XX-mme"; */
-"XwD-XX-mme.text" = "34'";
-
-/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "XxY-GZ-LVj"; */
-"XxY-GZ-LVj.title" = "Item";
-
-/* Class = "UILabel"; text = "Selecciona la opción que mejor se  adapte a lo que quieres mover."; ObjectID = "ZoO-az-M9m"; */
-"ZoO-az-M9m.text" = "Selecciona la opción que mejor se  adapte a lo que quieres mover.";
-
-/* Class = "UILabel"; text = "Gana dinero con tu furgoneta"; ObjectID = "Zri-Oj-bf2"; */
-"Zri-Oj-bf2.text" = "Gana dinero con tu furgoneta";
-
-/* Class = "UITextField"; placeholder = "Apellidos"; ObjectID = "a0C-Qd-HD4"; */
-"a0C-Qd-HD4.placeholder" = "Apellidos";
-
-/* Class = "UILabel"; text = "(Perfecto para mover muebles o varios objetos más grandes. Prepárate para ayudar si es  necesario.)"; ObjectID = "aVz-eA-Ula"; */
-"aVz-eA-Ula.text" = "(Perfecto para mover muebles o varios objetos más grandes. Prepárate para ayudar si es  necesario.)";
-
-/* Class = "UIButton"; normalTitle = "Salir"; ObjectID = "auD-a7-eGI"; */
-"auD-a7-eGI.normalTitle" = "Salir";
-
-/* Class = "UIButton"; normalTitle = "Enviar Solicitud"; ObjectID = "bJh-9H-BPU"; */
-"bJh-9H-BPU.normalTitle" = "Enviar Solicitud";
-
-/* Class = "UILabel"; text = "Hasta:  "; ObjectID = "bLr-1f-zpj"; */
-"bLr-1f-zpj.text" = "Hasta:  ";
-
-/* Class = "UILabel"; text = "Disponible en este momento:"; ObjectID = "bqQ-4b-ho7"; */
-"bqQ-4b-ho7.text" = "Disponible en este momento:";
-
-/* Class = "UIButton"; normalTitle = "Normal"; ObjectID = "bx4-TA-oPE"; */
-"bx4-TA-oPE.normalTitle" = "Normal";
-
-/* Class = "UIButton"; selectedTitle = "Normal"; ObjectID = "bx4-TA-oPE"; */
-"bx4-TA-oPE.selectedTitle" = "Normal";
-
-/* Class = "UILabel"; text = "Ciudad"; ObjectID = "cZ8-AO-vho"; */
-"cZ8-AO-vho.text" = "Ciudad";
-
-/* Class = "UILabel"; text = "Origen y Destino"; ObjectID = "ccg-Sy-PYB"; */
-"ccg-Sy-PYB.text" = "Origen y Destino";
-
-/* Class = "UILabel"; text = "Nombre"; ObjectID = "cfw-wb-eOm"; */
-"cfw-wb-eOm.text" = "Nombre";
-
-/* Class = "UIButton"; normalTitle = "Número de Horas"; ObjectID = "cns-40-kHT"; */
-"cns-40-kHT.normalTitle" = "Número de Horas";
-
-/* Class = "UILabel"; text = "Como porter haces feliz a los demás quitándoles el stress de mover objetos de un sitio a otro"; ObjectID = "cnw-Hf-BIJ"; */
-"cnw-Hf-BIJ.text" = "Como porter haces feliz a los demás quitándoles el stress de mover objetos de un sitio a otro";
-
-/* Class = "UILabel"; text = "Conductor / Porter"; ObjectID = "dbZ-W2-CjE"; */
-"dbZ-W2-CjE.text" = "Conductor / Porter";
-
-/* Class = "UILabel"; text = "Calle Isaac Albéniz, 1- Urb Prado, Pepino, Toledo, España"; ObjectID = "e7s-X9-Ezd"; */
-"e7s-X9-Ezd.text" = "Calle Isaac Albéniz, 1- Urb Prado, Pepino, Toledo, España";
-
-/* Class = "UILabel"; text = "Av. del Príncipe Felipe, 8, 45600 Reina, Toledo, Spain"; ObjectID = "eva-pu-FNs"; */
-"eva-pu-FNs.text" = "Av. del Príncipe Felipe, 8, 45600 Reina, Toledo, Spain";
-
-/* Class = "UIButton"; normalTitle = "+"; ObjectID = "faX-3b-aJ2"; */
-"faX-3b-aJ2.normalTitle" = "+";
-
-/* Class = "UILabel"; text = "Por favor introduzca aquí los  datos de su tarjeta"; ObjectID = "fb4-ml-Ng5"; */
-"fb4-ml-Ng5.text" = "Por favor introduzca aquí los  datos de su tarjeta";
-
-/* Class = "UILabel"; text = "Descarga:"; ObjectID = "gTg-7v-djA"; */
-"gTg-7v-djA.text" = "Descarga:";
-
-/* Class = "UILabel"; text = "Para múltiples destinos y tener libertad de horas. Seguimos tu ruta y descargamos / cargamos lo que necesites."; ObjectID = "gel-3L-mf6"; */
-"gel-3L-mf6.text" = "Para múltiples destinos y tener libertad de horas. Seguimos tu ruta y descargamos / cargamos lo que necesites.";
-
-/* Class = "UIButton"; normalTitle = "Empezar"; ObjectID = "glC-Ak-1hd"; */
-"glC-Ak-1hd.normalTitle" = "Empezar";
-
-/* Class = "UILabel"; text = "Conductor  / Porter"; ObjectID = "gox-wQ-b1m"; */
-"gox-wQ-b1m.text" = "Conductor  / Porter";
-
-/* Class = "UILabel"; text = "Repite tu contraseña nueva"; ObjectID = "gxv-T7-j1B"; */
-"gxv-T7-j1B.text" = "Repite tu contraseña nueva";
-
-/* Class = "UILabel"; text = "Número:"; ObjectID = "hBW-bJ-ZIb"; */
-"hBW-bJ-ZIb.text" = "Número:";
-
-/* Class = "UIButton"; normalTitle = "Inmediato"; ObjectID = "hDt-ce-fAc"; */
-"hDt-ce-fAc.normalTitle" = "Inmediato";
-
-/* Class = "UILabel"; text = "Mis Portes"; ObjectID = "hJz-VQ-CDb"; */
-"hJz-VQ-CDb.text" = "Mis Portes";
-
-/* Class = "UINavigationItem"; title = "Perfil"; ObjectID = "hhe-ov-uZM"; */
-"hhe-ov-uZM.title" = "Perfil";
-
-/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "i8N-m4-MdD"; */
-"i8N-m4-MdD.title" = "Item";
-
-/* Class = "UITextField"; placeholder = "XXXX XXXX X..."; ObjectID = "i9A-oz-eEw"; */
-"i9A-oz-eEw.placeholder" = "XXXX XXXX X...";
-
-/* Class = "UIButton"; normalTitle = "Cerrar"; ObjectID = "iQd-wG-YBy"; */
-"iQd-wG-YBy.normalTitle" = "Cerrar";
-
-/* Class = "UILabel"; text = "Label"; ObjectID = "iW9-kF-dZA"; */
-"iW9-kF-dZA.text" = "Label";
-
-/* Class = "UIButton"; normalTitle = "Conviértete en un Porter"; ObjectID = "iex-YN-VXU"; */
-"iex-YN-VXU.normalTitle" = "Conviértete en un Porter";
-
-/* Class = "UILabel"; text = "Contacto"; ObjectID = "jrd-pE-bYH"; */
-"jrd-pE-bYH.text" = "Contacto";
-
-/* Class = "UIButton"; normalTitle = "Enviar mensaje"; ObjectID = "jsE-Oj-NVC"; */
-"jsE-Oj-NVC.normalTitle" = "Enviar mensaje";
-
-/* Class = "UILabel"; text = "Teléfono"; ObjectID = "kB1-hu-eqW"; */
-"kB1-hu-eqW.text" = "Teléfono";
-
-/* Class = "UILabel"; text = "El precio final podría ser algo mayor  dependiendo del tiempo final del porte."; ObjectID = "kJ8-hk-Tfv"; */
-"kJ8-hk-Tfv.text" = "El precio final podría ser algo mayor  dependiendo del tiempo final del porte.";
-
-/* Class = "UITextField"; placeholder = "Nombre"; ObjectID = "l1u-eB-rBw"; */
-"l1u-eB-rBw.placeholder" = "Nombre";
-
-/* Class = "UIButton"; normalTitle = "Guardar"; ObjectID = "lRj-3r-DkQ"; */
-"lRj-3r-DkQ.normalTitle" = "Guardar";
-
-/* Class = "UIButton"; normalTitle = "Reservar un Porter"; ObjectID = "lcG-mb-kix"; */
-"lcG-mb-kix.normalTitle" = "Reservar un Porter";
-
-/* Class = "UILabel"; text = "En breve recibirá más información sobre su porte."; ObjectID = "ltv-SO-ImV"; */
-"ltv-SO-ImV.text" = "En breve recibirá más información sobre su porte.";
-
-/* Class = "UIButton"; normalTitle = "Cambiar contraseña"; ObjectID = "m4w-Un-yha"; */
-"m4w-Un-yha.normalTitle" = "Cambiar contraseña";
-
-/* Class = "UITextField"; placeholder = "Teléfono"; ObjectID = "mDM-8Q-HWa"; */
-"mDM-8Q-HWa.placeholder" = "Teléfono";
-
-/* Class = "UILabel"; text = "34'"; ObjectID = "mMY-ky-GnC"; */
-"mMY-ky-GnC.text" = "34'";
-
-/* Class = "UIButton"; normalTitle = "Guardar"; ObjectID = "mrA-OL-1Dz"; */
-"mrA-OL-1Dz.normalTitle" = "Guardar";
-
-/* Class = "UILabel"; text = "Haz feliz a los demás"; ObjectID = "mw5-er-dRK"; */
-"mw5-er-dRK.text" = "Haz feliz a los demás";
-
-/* Class = "UIButton"; normalTitle = "Olvidó su contraseña?"; ObjectID = "oO7-mB-0AW"; */
-"oO7-mB-0AW.normalTitle" = "Olvidó su contraseña?";
-
-/* Class = "UILabel"; text = "Carga"; ObjectID = "pc3-Cs-rYH"; */
-"pc3-Cs-rYH.text" = "Carga";
-
-/* Class = "UIButton"; normalTitle = "Enviar"; ObjectID = "qMj-y3-6Uf"; */
-"qMj-y3-6Uf.normalTitle" = "Enviar";
-
-/* Class = "UILabel"; text = "Si sólo tienes un origen y un destino.  Carga en el origen y descarga en el destino."; ObjectID = "r8f-Ax-pUK"; */
-"r8f-Ax-pUK.text" = "Si sólo tienes un origen y un destino.  Carga en el origen y descarga en el destino.";
-
-/* Class = "UILabel"; text = "Label"; ObjectID = "rdU-57-vV3"; */
-"rdU-57-vV3.text" = "Label";
-
-/* Class = "UILabel"; text = "Label"; ObjectID = "rfH-QN-Uve"; */
-"rfH-QN-Uve.text" = "Label";
-
-/* Class = "UILabel"; text = "34'"; ObjectID = "s7H-ah-9fv"; */
-"s7H-ah-9fv.text" = "34'";
-
-/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "sJq-DB-iSQ"; */
-"sJq-DB-iSQ.title" = "Item";
-
-/* Class = "UILabel"; text = "Label"; ObjectID = "sze-xQ-UmE"; */
-"sze-xQ-UmE.text" = "Label";
-
-/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "t0O-l1-tg8"; */
-"t0O-l1-tg8.title" = "Item";
-
-/* Class = "UILabel"; text = "Solo conductor"; ObjectID = "t2R-Bi-prB"; */
-"t2R-Bi-prB.text" = "Solo conductor";
-
-/* Class = "UILabel"; text = "Desde: "; ObjectID = "tmo-bb-HlJ"; */
-"tmo-bb-HlJ.text" = "Desde: ";
-
-/* Class = "UILabel"; text = "Esto es sólo un estimado"; ObjectID = "tod-qK-DlL"; */
-"tod-qK-DlL.text" = "Esto es sólo un estimado";
-
-/* Class = "UILabel"; text = "Conviértete en  Porter"; ObjectID = "uZt-oZ-ROl"; */
-"uZt-oZ-ROl.text" = "Conviértete en  Porter";
-
-/* Class = "UILabel"; text = "Fecha de nacimiento"; ObjectID = "vWr-Dg-MU0"; */
-"vWr-Dg-MU0.text" = "Fecha de nacimiento";
-
-/* Class = "UIButton"; normalTitle = "Ingresar con Facebook"; ObjectID = "wOP-2y-JIr"; */
-"wOP-2y-JIr.normalTitle" = "Ingresar con Facebook";
-
-/* Class = "UILabel"; text = " Todas nuestras furgonetas tienen un  tamaño de 6 metros de largo"; ObjectID = "wmG-Vq-IHZ"; */
-"wmG-Vq-IHZ.text" = " Todas nuestras furgonetas tienen un  tamaño de 6 metros de largo";
-
-/* Class = "UITextField"; placeholder = "Ingresar Contraseña"; ObjectID = "wtL-Me-dPZ"; */
-"wtL-Me-dPZ.placeholder" = "Ingresar Contraseña";
-
-/* Class = "UILabel"; text = "Conductor / Porter"; ObjectID = "x3p-TF-FuC"; */
-"x3p-TF-FuC.text" = "Conductor / Porter";
-
-/* Class = "UILabel"; text = "Si no tienes furgoneta también puedes aplicar como segundo porter en alguna de las furgonetas que tenemos"; ObjectID = "xBq-QO-eSx"; */
-"xBq-QO-eSx.text" = "Si no tienes furgoneta también puedes aplicar como segundo porter en alguna de las furgonetas que tenemos";
-
-/* Class = "UILabel"; text = "Simpatía"; ObjectID = "xCM-UZ-tEH"; */
-"xCM-UZ-tEH.text" = "Simpatía";
-
-/* Class = "UILabel"; text = "15 min (Tiempo real)"; ObjectID = "xn2-tc-XRW"; */
-"xn2-tc-XRW.text" = "15 min (Tiempo real)";
-
-/* Class = "UILabel"; text = "El precio final podría ser algo mayor dependiendo del tiempo final del porte."; ObjectID = "xxO-cb-AAU"; */
-"xxO-cb-AAU.text" = "El precio final podría ser algo mayor dependiendo del tiempo final del porte.";
-
-/* Class = "UILabel"; text = "Estado:"; ObjectID = "y6c-jV-hsw"; */
-"y6c-jV-hsw.text" = "Estado:";
-
-/* Class = "UIButton"; normalTitle = "Enviar"; ObjectID = "yJq-oA-N87"; */
-"yJq-oA-N87.normalTitle" = "Enviar";
-
-/* Class = "UILabel"; text = "Puedes trabajar entre semana y los fines de semana. Organizate y trabaja cuando quieras."; ObjectID = "yrE-4g-bB3"; */
-"yrE-4g-bB3.text" = "Puedes trabajar entre semana y los fines de semana. Organizate y trabaja cuando quieras.";
-
-/* Class = "UILabel"; text = "Rapidez"; ObjectID = "zFE-93-70v"; */
-"zFE-93-70v.text" = "Rapidez";
-
-/* Class = "UIButton"; normalTitle = "Inicia sesión"; ObjectID = "zLm-4V-blV"; */
-"zLm-4V-blV.normalTitle" = "Inicia sesión";
-
-/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "zMw-9S-A2g"; */
-"zMw-9S-A2g.title" = "Item";
-
-/* Class = "UILabel"; text = "Ingresa contraseña actual"; ObjectID = "zsY-xR-Y3d"; */
-"zsY-xR-Y3d.text" = "Ingresa contraseña actual";
